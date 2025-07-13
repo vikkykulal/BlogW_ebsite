@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Responsive blog website",
   "scripts": {
-    "start": "npx live-server",
+    "start": "node server.js",
     "dev": "live-server --port=3000"
   },
   "dependencies": {
+    "express": "^5.1.0",
     "live-server": "^1.2.2"
   }
 }
