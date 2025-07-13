@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Responsive blog website",
   "scripts": {
-    "start": "live-server",
+    "start": "npx live-server",
     "dev": "live-server --port=3000"
   },
   "devDependencies": {
