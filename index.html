@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="home">
+    <nav class="navbar">
+        <div class="logo">BlogSite</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li class="dropdown">
+                <a href="#categories" class="dropbtn">Categories <span class="arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-header">Categories</div>
+                    <a href="#blog" data-category="all">All Posts</a>
+                    <a href="#" data-category="technology">Technology</a>
+                    <a href="#" data-category="lifestyle">Lifestyle</a>
+                    <a href="#" data-category="travel">Travel</a>
+                    <a href="#" data-category="nature">Nature</a>
+                    <a href="#" data-category="food">Food</a>
+                    <a href="#" data-category="health">Health</a>
+                    <a href="#" data-category="business">Business</a>
+                </div>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Explore the World of Ideas</h1>
+            <p>Your daily source of inspiration and knowledge</p>
+            <div class="hero-buttons">
+                <a href="#blog" class="cta-button primary">Start Reading</a>
+                <a href="#subscribe" class="cta-button secondary">Subscribe</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="blog-grid" id="blog">
+            <!-- Technology -->
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Future of AI Development.webp" alt="Tech Blog" 
+                         onerror="this.src='https://source.unsplash.com/600x400/daily?coding'">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">March 15, 2024</span>
+                        <span class="read-time">5 min read</span>
+                    </div>
+                    <h2>Future of AI Development</h2>
+                    <p>Exploring the latest breakthroughs in artificial intelligence and machine learning.</p>
+                    <a href="post.html?title=Future%20of%20AI%20Development" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Tech Innovations 2024.webp" alt="Tech Innovations">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">April 2, 2024</span>
+                        <span class="read-time">6 min read</span>
+                    </div>
+                    <h2>Tech Innovations 2024</h2>
+                    <p>Discover the most exciting technology trends and gadgets coming this year.</p>
+                    <a href="post.html?title=Tech%20Innovations%202024" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/AI in Everyday Life.webp" alt="AI in Everyday Life">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">April 22, 2024</span>
+                        <span class="read-time">7 min read</span>
+                    </div>
+                    <h2>AI in Everyday Life</h2>
+                    <p>How artificial intelligence is transforming our daily routines and work.</p>
+                    <a href="post.html?title=AI%20in%20Everyday%20Life" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <!-- Nature -->
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Environmental Impact.webp" alt="Nature Blog">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">March 12, 2024</span>
+                        <span class="read-time">7 min read</span>
+                    </div>
+                    <h2>Environmental Impact</h2>
+                    <p>Understanding our impact on the environment and sustainable living practices.</p>
+                    <a href="post.html?title=Environmental%20Impact" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Wildlife Wonders.webp" alt="Wildlife Wonders">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">April 5, 2024</span>
+                        <span class="read-time">5 min read</span>
+                    </div>
+                    <h2>Wildlife Wonders</h2>
+                    <p>Explore the beauty and diversity of wildlife across the globe.</p>
+                    <a href="post.html?title=Wildlife%20Wonders" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Forest Conservation.webp" alt="Forest Conservation">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">April 25, 2024</span>
+                        <span class="read-time">6 min read</span>
+                    </div>
+                    <h2>Forest Conservation</h2>
+                    <p>Why protecting forests is crucial for our planet's future.</p>
+                    <a href="post.html?title=Forest%20Conservation" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <!-- Food -->
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Culinary Adventures.webp" alt="Food Blog">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">March 10, 2024</span>
+                        <span class="read-time">4 min read</span>
+                    </div>
+                    <h2>Culinary Adventures</h2>
+                    <p>Discover delicious recipes and food stories from around the world.</p>
+                    <a href="post.html?title=Culinary%20Adventures" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Healthy Breakfast Ideas.webp" alt="Healthy Breakfast Ideas">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">April 8, 2024</span>
+                        <span class="read-time">3 min read</span>
+                    </div>
+                    <h2>Healthy Breakfast Ideas</h2>
+                    <p>Start your day with these nutritious and easy breakfast recipes.</p>
+                    <a href="post.html?title=Healthy%20Breakfast%20Ideas" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Street Food Around the World.webp" alt="Street Food Around the World">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">April 28, 2024</span>
+                        <span class="read-time">5 min read</span>
+                    </div>
+                    <h2>Street Food Around the World</h2>
+                    <p>Experience the flavors and culture of street food from different countries.</p>
+                    <a href="post.html?title=Street%20Food%20Around%20the%20World" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <!-- Travel -->
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Hidden Gems of Europe.webp" alt="Travel Blog">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">March 8, 2024</span>
+                        <span class="read-time">6 min read</span>
+                    </div>
+                    <h2>Hidden Gems of Europe</h2>
+                    <p>Explore off-the-beaten-path destinations that will inspire your next adventure.</p>
+                    <a href="post.html?title=Hidden%20Gems%20of%20Europe" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Backpacking Asia.webp" alt="Backpacking Asia">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">April 10, 2024</span>
+                        <span class="read-time">7 min read</span>
+                    </div>
+                    <h2>Backpacking Asia</h2>
+                    <p>Tips and stories from an unforgettable backpacking journey through Asia.</p>
+                    <a href="post.html?title=Backpacking%20Asia" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Travel Photography Tips.webp" alt="Travel Photography Tips">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">April 30, 2024</span>
+                        <span class="read-time">6 min read</span>
+                    </div>
+                    <h2>Travel Photography Tips</h2>
+                    <p>How to capture stunning travel photos and memories on your journeys.</p>
+                    <a href="post.html?title=Travel%20Photography%20Tips" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <!-- Health -->
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Wellness Journey.webp" alt="Health Blog">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">March 6, 2024</span>
+                        <span class="read-time">8 min read</span>
+                    </div>
+                    <h2>Wellness Journey</h2>
+                    <p>Tips and strategies for maintaining a healthy lifestyle in our busy world.</p>
+                    <a href="post.html?title=Wellness%20Journey" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Fitness Motivation.webp" alt="Fitness Motivation">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">April 12, 2024</span>
+                        <span class="read-time">5 min read</span>
+                    </div>
+                    <h2>Fitness Motivation</h2>
+                    <p>How to stay motivated and consistent with your fitness goals.</p>
+                    <a href="post.html?title=Fitness%20Motivation" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Mental Health Matters.webp" alt="Mental Health Matters">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">May 2, 2024</span>
+                        <span class="read-time">7 min read</span>
+                    </div>
+                    <h2>Mental Health Matters</h2>
+                    <p>Understanding and supporting mental health for a happier life.</p>
+                    <a href="post.html?title=Mental%20Health%20Matters" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <!-- Business -->
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Digital Marketing Trends.jpg" alt="Business Blog">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">March 4, 2024</span>
+                        <span class="read-time">10 min read</span>
+                    </div>
+                    <h2>Digital Marketing Trends</h2>
+                    <p>Stay ahead of the curve with the latest marketing strategies and tools.</p>
+                    <a href="post.html?title=Digital%20Marketing%20Trends" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Startup Success Stories.webp" alt="Startup Success Stories">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">April 15, 2024</span>
+                        <span class="read-time">8 min read</span>
+                    </div>
+                    <h2>Startup Success Stories</h2>
+                    <p>Inspiring journeys of entrepreneurs who built successful startups.</p>
+                    <a href="post.html?title=Startup%20Success%20Stories" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Remote Work Revolution.webp" alt="Remote Work Revolution">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">May 5, 2024</span>
+                        <span class="read-time">9 min read</span>
+                    </div>
+                    <h2>Remote Work Revolution</h2>
+                    <p>How remote work is changing the business landscape and employee lives.</p>
+                    <a href="post.html?title=Remote%20Work%20Revolution" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <!-- Lifestyle -->
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Mindful Living.webp" alt="Mindful Living">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">April 18, 2024</span>
+                        <span class="read-time">6 min read</span>
+                    </div>
+                    <h2>Mindful Living</h2>
+                    <p>Simple habits to help you live a more mindful and fulfilling life.</p>
+                    <a href="post.html?title=Mindful%20Living" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Home Decor Trends.webp" alt="Home Decor Trends">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">April 20, 2024</span>
+                        <span class="read-time">4 min read</span>
+                    </div>
+                    <h2>Home Decor Trends</h2>
+                    <p>Discover the latest trends in home decor and interior design.</p>
+                    <a href="post.html?title=Home%20Decor%20Trends" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="images/Work-Life Balance Tips.webp" alt="Work-Life Balance Tips">
+                </div>
+                <div class="blog-content">
+                    <div class="meta">
+                        <span class="date">May 8, 2024</span>
+                        <span class="read-time">5 min read</span>
+                    </div>
+                    <h2>Work-Life Balance Tips</h2>
+                    <p>Practical advice for achieving balance between work and personal life.</p>
+                    <a href="post.html?title=Work-Life%20Balance%20Tips" class="read-more">Read More <span>→</span></a>
+                </div>
+            </article>
+        </main>
+        <section id="dynamic-article" class="dynamic-article" style="display:none; max-width:800px; margin:2rem auto; background:#fff; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); padding:2rem;">
+            <!-- Article content will be injected here -->
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about" id="about">
+                <h3>About Us</h3>
+                <p>
+                    BlogSite is your daily source of inspiration and knowledge. We share stories, insights, and tips on technology, travel, food, and more.
+                </p>
+            </div>
+            <div class="footer-section contact" id="contact">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:info@blogsite.com">info@blogsite.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" style="height:24px;vertical-align:middle;">
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter" style="height:24px;vertical-align:middle;">
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" style="height:24px;vertical-align:middle;">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BlogSite. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="data/posts.js"></script>
+    <script src="js/imageLoader.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+// Add this script at the end of your HTML file
+
+const articles = {
+    "Future of AI Development": {
+        title: "Future of AI Development",
+        image: "images/Future of AI Development.webp",
+        content: `<p>The future of AI development is rapidly evolving, with breakthroughs in machine learning, natural language processing, and robotics. AI is transforming industries such as healthcare, finance, and transportation, making processes more efficient and enabling new possibilities. As AI continues to advance, ethical considerations and responsible development will be crucial to ensure positive impact on society.</p>`
+    },
+    "Tech Innovations 2024": {
+        title: "Tech Innovations 2024",
+        image: "images/Tech Innovations 2024.webp",
+        content: `<p>2024 brings a wave of exciting tech innovations, from quantum computing advancements to smarter wearable devices. The integration of AI in everyday gadgets, improvements in battery technology, and the rise of augmented reality are set to redefine how we interact with technology. Stay tuned for more updates on the latest trends and products.</p>`
+    },
+    "AI in Everyday Life": {
+        title: "AI in Everyday Life",
+        image: "images/AI in Everyday Life.webp",
+        content: `<p>Artificial Intelligence is now a part of our daily routines, powering virtual assistants, smart home devices, and personalized recommendations. From optimizing energy usage to enhancing entertainment experiences, AI is making life more convenient and efficient for everyone.</p>`
+    },
+    "Environmental Impact": {
+        title: "Environmental Impact",
+        image: "images/Environmental Impact.webp",
+        content: `<p>Understanding our impact on the environment and sustainable living practices is crucial for the health of our planet. This article explores the various ways we can reduce our ecological footprint and make a positive difference.</p>`
+    },
+    "Wildlife Wonders": {
+        title: "Wildlife Wonders",
+        image: "images/Wildlife Wonders.webp",
+        content: `<p>Explore the beauty and diversity of wildlife across the globe. From the savannahs of Africa to the rainforests of the Amazon, discover the incredible animals that share our planet and learn how we can protect their habitats.</p>`
+    },
+    "Forest Conservation": {
+        title: "Forest Conservation",
+        image: "images/Forest Conservation.webp",
+        content: `<p>Why protecting forests is crucial for our planet's future. Deforestation and forest degradation are major contributors to climate change, loss of biodiversity, and disruption of water cycles. This article discusses the importance of forests and how we can conserve them.</p>`
+    },
+    "Culinary Adventures": {
+        title: "Culinary Adventures",
+        image: "images/Culinary Adventures.webp",
+        content: `<p>Discover delicious recipes and food stories from around the world. This article takes you on a culinary journey, exploring the flavors and cooking traditions of different cultures.</p>`
+    },
+    "Healthy Breakfast Ideas": {
+        title: "Healthy Breakfast Ideas",
+        image: "images/Healthy Breakfast Ideas.webp",
+        content: `<p>Start your day with nutritious breakfast ideas such as overnight oats, smoothie bowls, and avocado toast. These recipes are not only healthy but also quick to prepare, giving you the energy you need for a productive day.</p>`
+    },
+    "Street Food Around the World": {
+        title: "Street Food Around the World",
+        image: "images/Street Food Around the World.webp",
+        content: `<p>Explore the vibrant world of street food, from spicy tacos in Mexico to savory crepes in France. Street food reflects the culture and flavors of each region, offering a unique culinary adventure for food lovers.</p>`
+    },
+    "Hidden Gems of Europe": {
+        title: "Hidden Gems of Europe",
+        image: "images/Hidden Gems of Europe.webp",
+        content: `<p>Explore off-the-beaten-path destinations that will inspire your next adventure. This article uncovers the hidden gems of Europe, from quaint villages to stunning natural landscapes.</p>`
+    },
+    "Backpacking Asia": {
+        title: "Backpacking Asia",
+        image: "images/Backpacking Asia.webp",
+        content: `<p>Tips and stories from an unforgettable backpacking journey through Asia. Discover the best routes, must-see places, and essential tips for an epic backpacking trip.</p>`
+    },
+    "Travel Photography Tips": {
+        title: "Travel Photography Tips",
+        image: "images/Travel Photography Tips.webp",
+        content: `<p>How to capture stunning travel photos and memories on your journeys. This article provides tips on composition, lighting, and the best equipment to use for travel photography.</p>`
+    },
+    "Wellness Journey": {
+        title: "Wellness Journey",
+        image: "images/Wellness Journey.webp",
+        content: `<p>Tips and strategies for maintaining a healthy lifestyle in our busy world. From nutrition and exercise to mindfulness and stress management, learn how to improve your overall well-being.</p>`
+    },
+    "Fitness Motivation": {
+        title: "Fitness Motivation",
+        image: "images/Fitness Motivation.webp",
+        content: `<p>How to stay motivated and consistent with your fitness goals. This article shares practical tips and personal stories to inspire you on your fitness journey.</p>`
+    },
+    "Mental Health Matters": {
+        title: "Mental Health Matters",
+        image: "images/Mental Health Matters.webp",
+        content: `<p>Understanding and supporting mental health for a happier life. Learn about the importance of mental health, how to take care of your mental well-being, and where to seek help if needed.</p>`
+    },
+    "Digital Marketing Trends": {
+        title: "Digital Marketing Trends",
+        image: "images/Digital Marketing Trends.jpg",
+        content: `<p>Stay ahead of the curve with the latest marketing strategies and tools. This article explores the top digital marketing trends that will dominate in 2024 and beyond.</p>`
+    },
+    "Startup Success Stories": {
+        title: "Startup Success Stories",
+        image: "images/Startup Success Stories.webp",
+        content: `<p>Inspiring journeys of entrepreneurs who built successful startups. Discover the challenges they faced, the lessons they learned, and their advice for aspiring entrepreneurs.</p>`
+    },
+    "Remote Work Revolution": {
+        title: "Remote Work Revolution",
+        image: "images/Remote Work Revolution.webp",
+        content: `<p>How remote work is changing the business landscape and employee lives. This article discusses the benefits and challenges of remote work and offers tips for adapting to this new way of working.</p>`
+    },
+    "Mindful Living": {
+        title: "Mindful Living",
+        image: "images/Mindful Living.webp",
+        content: `<p>Simple habits to help you live a more mindful and fulfilling life. Learn about the principles of mindful living and how to incorporate mindfulness into your daily routine.</p>`
+    },
+    "Home Decor Trends": {
+        title: "Home Decor Trends",
+        image: "images/Home Decor Trends.webp",
+        content: `<p>Discover the latest trends in home decor and interior design. This article showcases the top home decor trends that will transform your living space in 2024.</p>`
+    },
+    "Work-Life Balance Tips": {
+        title: "Work-Life Balance Tips",
+        image: "images/Work-Life Balance Tips.webp",
+        content: `<p>Practical advice for achieving balance between work and personal life. Learn how to set boundaries, manage your time effectively, and prioritize your well-being.</p>`
+    }
+};
+
+document.querySelectorAll('.read-more').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const url = new URL(link.href, window.location.origin);
+        const params = new URLSearchParams(url.search);
+        const title = params.get('title') || link.closest('.blog-card').querySelector('h2').textContent.trim();
+        const article = articles[title];
+        const container = document.getElementById('dynamic-article');
+        if (article && container) {
+            container.innerHTML = `
+                <h2 style="margin-bottom:1rem;">${article.title}</h2>
+                <img src="${article.image}" alt="${article.title}" style="width:100%;max-width:500px;border-radius:8px;margin-bottom:1rem;">
+                ${article.content}
+                <button id="close-article" style="margin-top:2rem;padding:0.5rem 1.5rem;background:#ff6b6b;color:#fff;border:none;border-radius:4px;cursor:pointer;">Close</button>
+            `;
+            container.style.display = 'block';
+            window.scrollTo({ top: container.offsetTop - 40, behavior: 'smooth' });
+            document.getElementById('close-article').onclick = () => {
+                container.style.display = 'none';
+            };
+        }
+    });
+});
+</script>
+</body>
+</html>
