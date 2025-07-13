@@ -27,7 +27,8 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 2000; /* Increased z-index */
+    width: 100vw;  /* Ensure navbar spans full width */
 }
 
 .nav-links {
@@ -154,6 +155,9 @@ body {
     flex: 1 1 300px;
     max-width: 350px;
     min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .blog-card:hover {
@@ -240,6 +244,12 @@ body {
 
 .blog-content {
     padding: 1rem;
+    /* Add extra bottom padding for mobile to ensure button visibility */
+    padding-bottom: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
 }
 
 .blog-content h2 {
@@ -248,21 +258,102 @@ body {
     font-size: 1.5rem;
 }
 
+/* Ensure .read-more is always visible and not overlapped */
 .read-more {
-    display: inline-block;
-    padding: 0.5rem 1rem;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 1rem auto 0 auto;
+    padding: 0.75rem 1.5rem;
     background-color: #ff6b6b;
     color: white;
     text-decoration: none;
     border-radius: 4px;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s;
+    position: relative;
+    z-index: 1;
 }
 
 .read-more:hover {
     background-color: #ff5252;
+    transform: scale(1.05);
 }
 
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.dropbtn:hover {
+    color: #ff6b6b;
+}
+
+.arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #111;
+    min-width: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 2100;
+    border-radius: 8px;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    opacity: 1;
+    transform: translateY(0);
+    flex-direction: column;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-header {
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #111;
+    border-bottom: 1px solid #222;
+}
+
+.dropdown-content a {
+    color: #fff !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #222;
+    color: #ff6b6b !important;
+}
+
+/* Footer styles */
 footer {
     text-align: center;
     padding: 2rem;
@@ -328,149 +419,7 @@ footer {
     font-size: 0.95rem;
 }
 
-.main-content {
-    flex: 1;
-}
-
-.sidebar {
-    width: 300px;
-    background: #f8f8f8;
-    padding: 1rem;
-    position: sticky;
-    top: 1rem;
-    height: fit-content;
-}
-
-.sidebar-toggle {
-    display: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    text-align: right;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar a {
-    color: #333;
-    text-decoration: none;
-    padding: 0.5rem 0;
-    display: block;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.dropbtn:hover {
-    color: #ff6b6b;
-}
-
-.arrow {
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
-}
-
-.dropdown:hover .arrow {
-    transform: rotate(180deg);
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #111; /* Changed to black */
-    min-width: 250px;
-    max-height: 400px;
-    overflow-y: auto;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 8px;
-    overflow: hidden;
-    top: 100%;
-    left: 0;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-}
-
-.dropdown-header {
-    padding: 8px 16px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    color: #fff; /* White text for contrast */
-    background-color: #111; /* Match dropdown background */
-    border-bottom: 1px solid #222;
-}
-
-.dropdown-divider {
-    height: 1px;
-    background-color: #222;
-    margin: 4px 0;
-}
-
-.dropdown-content a,
-.recent-post-link {
-    color: #fff !important; /* White text */
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-content a:hover,
-.recent-post-link:hover {
-    background-color: #222; /* Slightly lighter black on hover */
-    color: #ff6b6b !important;
-}
-
-.recent-post {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
-}
-
-.recent-post:last-child {
-    border-bottom: none;
-}
-
-.recent-post h4 {
-    font-size: 0.9rem;
-    margin-bottom: 0.3rem;
-    color: #333;
-}
-
-.recent-date {
-    font-size: 0.8rem;
-    color: #666;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -488,6 +437,9 @@ footer {
         left: 0;
         right: 0;
         background-color: #333;
+        z-index: 2100; /* Ensure nav is above other content */
+        width: 100vw;  /* Full width */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     .container {
@@ -511,6 +463,18 @@ footer {
         max-width: 100%;
         min-width: unset;
     }
+
+    .blog-content {
+        padding-bottom: 2.5rem;
+    }
+
+    .read-more {
+        font-size: 1.1rem;
+        width: 100%;
+        min-width: unset;
+        max-width: 100%;
+        margin: 1rem 0 0 0;
+    }
 }
 
 @media (max-width: 900px) {
@@ -523,5 +487,16 @@ footer {
         flex-direction: column;
         gap: 2rem;
         padding: 2rem 0;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
